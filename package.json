@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "hashtable": "^2.0.2",
     "request": "^2.83.0",
     "telegram-node-bot": "^4.0.5"
   }

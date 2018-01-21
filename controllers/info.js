@@ -109,10 +109,10 @@ class InfoController extends Telegram.TelegramBaseController {
 				request.get("https://api.fixer.io/latest?base=" + conv1, function(err,res,body) {
 					var obj = JSON.parse(body);
 					var newobj = obj.rates[conv2];
-					if(num == null) $.sendMessage("*" + _comaNumber(newobj) + " " + conv2 + "*", {parse_mode: "Markdown"});
+					if(num == null) $.sendMessage("*" + _comaNumber(newobj.toString()) + " " + conv2 + "*", {parse_mode: "Markdown"});
 					else {
 						var newNum = num * newobj;
-						$.sendMessage("*" + _comaNumber(newNum) + " " + conv2 + "*", {parse_mode: "Markdown"});
+						$.sendMessage("*" + _comaNumber(newNum.toString()) + " " + conv2 + "*", {parse_mode: "Markdown"});
 					}
 				});
 
@@ -137,10 +137,10 @@ class InfoController extends Telegram.TelegramBaseController {
 						else {
 							var conv2low = "price_" + conv2.toLowerCase();
 							var newobj = obj[0][conv2low];
-							if(num == null) $.sendMessage("*" + _comaNumber(newobj) + " " + conv2 + "*", {parse_mode: "Markdown"});
+							if(num == null) $.sendMessage("*" + _comaNumber(newobj.toString()) + " " + conv2 + "*", {parse_mode: "Markdown"});
 							else {
 								var newNum = num * newobj;
-								$.sendMessage("*" + _comaNumber(newNum) + " " + conv2 + "*", {parse_mode: "Markdown"});
+								$.sendMessage("*" + _comaNumber(newNum.toString()) + " " + conv2 + "*", {parse_mode: "Markdown"});
 							}
 						}
 					});
