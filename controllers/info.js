@@ -154,7 +154,7 @@ class InfoController extends Telegram.TelegramBaseController {
 		request.get("https://api.coinmarketcap.com/v1/global/", function(err,res,body) {
 			var obj = JSON.parse(body);
 			console.log(obj);
-			var str = "```Total Market Cap: $" + _comaNumber(obj.total_market_cap_usd.toString()) + "\n" +
+			var str = "``` Total Market Cap: $" + _comaNumber(obj.total_market_cap_usd.toString()) + "\n" +
 	  				  " Total 24h Volume: $" + _comaNumber(obj.total_24h_volume_usd.toString()) + "\n" +
 	  				  " BTC Porcentage: " + obj.bitcoin_percentage_of_market_cap + "% " + "```";
 			$.sendMessage(str, {parse_mode: "Markdown"});
