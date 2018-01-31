@@ -11,7 +11,9 @@ class StartController extends Telegram.TelegramBaseController {
 				  "or\n" +
 				  "`/convert <currency> to <currency>`\n" +
 				  "*Do currency conversions with crytpocurrency and fiat*\n" +
-				  "Fiat: EUR, USD, MXN & CAD\n\n\n" +
+				  "Fiat: EUR, USD, MXN & CAD\n\n" +
+				  "`/fcm`\n" +
+				  "*Gets the full coin market cap data*\n\n\n" +
 				  "If something is broke PM me @Guetop";
 
 		$.sendMessage(msg, {parse_mode: "Markdown"});

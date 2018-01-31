@@ -4,8 +4,8 @@ const Telegram = require("telegram-node-bot");
 
 var _comaNumber = function(num){
 	if(num != null){
-	    var num1 = num.split(".")[0];
-	    var num2 = num.split(".")[1];
+	    var	num1 = num.split(".")[0];
+	    var	num2 = num.split(".")[1];
 
 	    if(num2 == null) num2 = 0;
 	        
@@ -72,10 +72,10 @@ class InfoController extends Telegram.TelegramBaseController {
 
 
 				  		var str = "``` " + obj[0].name + " (" + obj[0].symbol + ")\n" +
-				  				  "$" + _comaNumber(obj[0].price_usd) + "  Ƀ" + obj[0].price_btc + "  1h:" + p1 + "% " + s1 +"  24h:" + p24 + "% " + s24 + "\n" +
-				  				  "MrktCap: " + _comaNumber(obj[0].market_cap_usd) + "\n" +
-				  				  "Vol24h: " + _comaNumber(obj[0]["24h_volume_usd"]) + "\n" +
-				  				  "CrcSupply: " + _comaNumber(obj[0].available_supply) +  "```";
+				  				  " $" + _comaNumber(obj[0].price_usd) + "  Ƀ" + obj[0].price_btc + "  1h:" + p1 + "% " + s1 +"  24h:" + p24 + "% " + s24 + "\n" +
+				  				  " MrktCap: " + _comaNumber(obj[0].market_cap_usd) + "\n" +
+				  				  " Vol24h: " + _comaNumber(obj[0]["24h_volume_usd"]) + "\n" +
+				  				  " CrcSupply: " + _comaNumber(obj[0].available_supply) +  "```";
 				  		$.sendMessage(str, {parse_mode: "Markdown"});
 				  	}
 				});
@@ -150,10 +150,22 @@ class InfoController extends Telegram.TelegramBaseController {
 		}
 	}	
 
+	fcmHandler($) {
+		request.get("https://api.coinmarketcap.com/v1/global/", function(err,res,body) {
+			var obj = JSON.parse(body);
+			console.log(obj);
+			var str = "```Total Market Cap: $" + _comaNumber(obj.total_market_cap_usd.toString()) + "\n" +
+	  				  " Total 24h Volume: $" + _comaNumber(obj.total_24h_volume_usd.toString()) + "\n" +
+	  				  " BTC Porcentage: " + obj.bitcoin_percentage_of_market_cap + "% " + "```";
+			$.sendMessage(str, {parse_mode: "Markdown"});
+		});
+	}
+
 	get routes() {
 		return {
 			"cmCommand": "cmHandler",
-			"convertCommand": "convertHandler"
+			"convertCommand": "convertHandler",
+			"fcmCommand": "fcmHandler"
 		}
 	}
 }

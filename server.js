@@ -12,6 +12,7 @@ const infoCtrl = new InfoController();
 
 tg.router.when(new Telegram.TextCommand("/cm", "cmCommand"), infoCtrl)
 	.when(new Telegram.TextCommand("/convert", "convertCommand"), infoCtrl)
+	.when(new Telegram.TextCommand("/fcm", "fcmCommand"), infoCtrl)
 	.when(new Telegram.TextCommand("/start", "startCommand"), new StartController)
 	.otherwise(new OtherwiseController());
 
