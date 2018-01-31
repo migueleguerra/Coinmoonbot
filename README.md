@@ -16,5 +16,9 @@ Do currency conversions with crytpocurrency and fiat
 
 Fiat: EUR, USD, MXN & CAD
 
+/fcm
+
+Gets the full coin market cap data
+
 
 If something is broke PM me @Guetop
