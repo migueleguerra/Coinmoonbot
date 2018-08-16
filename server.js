@@ -1,6 +1,9 @@
 'use strict';
 const Telegram = require('telegram-node-bot');
+const express = require('express');
 const keys = require('./config/keys');
+
+const app = express();
 
 const tg = new Telegram.Telegram(keys.telegram_key, {
   workers: 1
@@ -20,3 +23,5 @@ tg.router
     new StartController()
   )
   .otherwise(new OtherwiseController());
+
+app.listen(process.env.PORT);
