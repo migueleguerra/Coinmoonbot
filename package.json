@@ -2,13 +2,13 @@
   "name": "coinmoonbot",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "engines": {
     "node": "10.4.0",
     "npm": "6.2.0"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
