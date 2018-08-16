@@ -1,17 +1,23 @@
 'use strict';
 const Telegram = require('telegram-node-bot');
 const express = require('express');
+const packageInfo = require('./package.json');
 const keys = require('./config/keys');
 
 const app = express();
+
+app.get('/', function(req, res) {
+  res.json({ version: packageInfo.version });
+});
+
 var PORT;
 if (process.env.NODE_ENV === 'production') PORT = process.env.PORT;
-else PORT = 8000;
 
 const tg = new Telegram.Telegram(keys.telegram_key, {
   workers: 1,
   webAdmin: {
-    port: PORT
+    port: PORT,
+    host: 'localhost'
   }
 });
 
