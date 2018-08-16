@@ -4,9 +4,15 @@ const express = require('express');
 const keys = require('./config/keys');
 
 const app = express();
+var PORT;
+if (process.env.NODE_ENV === 'production') PORT = process.env.PORT;
+else PORT = 8000;
 
 const tg = new Telegram.Telegram(keys.telegram_key, {
-  workers: 1
+  workers: 1,
+  webAdmin: {
+    port: PORT
+  }
 });
 
 const InfoController = require('./controllers/info');
