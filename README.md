@@ -52,6 +52,7 @@ This command will give you information of the bot commands:
 /start
 ```
 example:
+![captura de pantalla 2018-07-10 a la s 16 29 08](https://user-images.githubusercontent.com/17505216/44280625-ec2cab80-a21a-11e8-85e5-803d962211cb.png)
 
 This command will give you information of a single coin:
 
