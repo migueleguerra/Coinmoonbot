@@ -72,6 +72,8 @@ This command will convert the cryptocurrency value to fiat money value _(only US
 ```
 example:
 
+![captura de pantalla 2018-08-17 a la s 12 50 32](https://user-images.githubusercontent.com/17505216/44281169-80e3d900-a21c-11e8-8ae0-2a178a368e2b.png)
+
 or
 
 ```
@@ -79,7 +81,7 @@ or
 ```
 example:
 
-![captura de pantalla 2018-08-17 a la s 12 50 32](https://user-images.githubusercontent.com/17505216/44281169-80e3d900-a21c-11e8-8ae0-2a178a368e2b.png)
+![captura de pantalla 2018-08-17 a la s 12 51 12](https://user-images.githubusercontent.com/17505216/44281241-b8528580-a21c-11e8-8f29-9ade6a422b8a.png)
 
 This command will give you information of the full coin market cap:
 
@@ -87,6 +89,7 @@ This command will give you information of the full coin market cap:
 /fcm
 ```
 example:
+
 
 ## Built With
 
