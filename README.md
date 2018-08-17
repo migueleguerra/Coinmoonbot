@@ -46,12 +46,18 @@ $ node index.js
 
 These are the commands use to talk to the bot on Telegram.
 
+This command will give you information of the bot commands:
+
+```
+/start
+```
+example:
+
 This command will give you information of a single coin:
 
 ```
 /cm (cryptocurrency name or abbreviation)
 ```
-
 example:
 
 This command will convert the cryptocurrency value to fiat money value _(only USD, EUR, MXN & CAD)_ and vice versa:
@@ -59,7 +65,6 @@ This command will convert the cryptocurrency value to fiat money value _(only US
 ```
 /convert (amount) (currency) to (currency)
 ```
-
 example:
 
 or
@@ -67,7 +72,6 @@ or
 ```
 /convert (currency) to (currency)
 ```
-
 example:
 
 This command will give you information of the full coin market cap:
@@ -75,7 +79,6 @@ This command will give you information of the full coin market cap:
 ```
 /fcm
 ```
-
 example:
 
 ## Built With
