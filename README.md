@@ -7,7 +7,7 @@ Coinmoonbot is a Telegram bot that gives you information about the full coin mar
 Download by clicking the download button or clone the Github repertory using the following command:
 
 ```
-$ git clone https://github.com/Guetop/uam-c-gestion.git
+$ git clone https://github.com/Guetop/Coinmoonbot.git
 ```
 
 ### Prerequisites
