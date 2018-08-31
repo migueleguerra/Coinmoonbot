@@ -101,4 +101,4 @@ example:
 
 ## Authors
 
-- **Miguel Guerra** - _Initial work_
+- [Miguel Guerra](https://www.linkedin.com/in/miguel-e-guerra-9b75bb111/) - _Initial work_
